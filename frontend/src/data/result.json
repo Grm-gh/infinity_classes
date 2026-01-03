@@ -1,0 +1,61 @@
+{
+  "2025": {
+    "id": "year-2025",
+    "title": "2025 Results",
+    "summary": "20 out of 61 Students Scored above 90%",
+    "students": [
+      { "id": 1, "name": "Atharva S.", "percentage": 97.6, "image": "https://randomuser.me/api/portraits/men/11.jpg" },
+      { "id": 2, "name": "Anuj T.", "percentage": 96.8, "image": "https://randomuser.me/api/portraits/men/12.jpg" },
+      { "id": 3, "name": "Aarya T.", "percentage": 95.6, "image": "https://randomuser.me/api/portraits/women/13.jpg" },
+
+      { "id": 4, "name": "Rudra S.", "percentage": 95.4, "image": "https://randomuser.me/api/portraits/men/14.jpg" },
+      { "id": 5, "name": "Harshal V.", "percentage": 95.4, "image": "https://randomuser.me/api/portraits/women/15.jpg" },
+      { "id": 6, "name": "Snehshish P.", "percentage": 95.2, "image": "https://randomuser.me/api/portraits/men/16.jpg" },
+
+      { "id": 7, "name": "Soham R.", "percentage": 95.2, "image": "https://randomuser.me/api/portraits/men/17.jpg" },
+      { "id": 8, "name": "Abhinav J.", "percentage": 94.4, "image": "https://randomuser.me/api/portraits/men/18.jpg" },
+      { "id": 9, "name": "Nidhi V.", "percentage": 94.0, "image": "https://randomuser.me/api/portraits/women/19.jpg" }
+    ]
+  },
+
+  "2024": {
+    "id": "year-2024",
+    "title": "2024 Results",
+    "summary": "Students Scoring Above 90%",
+    "students": [
+      { "id": 1, "name": "Gautam R.", "percentage": 94.0, "image": "https://randomuser.me/api/portraits/men/21.jpg" },
+      { "id": 2, "name": "Vedashree A.", "percentage": 94.0, "image": "https://randomuser.me/api/portraits/women/22.jpg" },
+      { "id": 3, "name": "Naitik G.", "percentage": 93.6, "image": "https://randomuser.me/api/portraits/men/23.jpg" },
+
+      { "id": 4, "name": "Tanvi P.", "percentage": 93.6, "image": "https://randomuser.me/api/portraits/women/24.jpg" },
+      { "id": 5, "name": "Rudraraj G.", "percentage": 92.6, "image": "https://randomuser.me/api/portraits/men/25.jpg" },
+      { "id": 6, "name": "Harsh S.", "percentage": 92.4, "image": "https://randomuser.me/api/portraits/men/26.jpg" },
+
+      { "id": 7, "name": "Soham G.", "percentage": 92.0, "image": "https://randomuser.me/api/portraits/men/27.jpg" },
+      { "id": 8, "name": "Arin D.", "percentage": 91.8, "image": "https://randomuser.me/api/portraits/men/28.jpg" },
+      { "id": 9, "name": "Tushti D.", "percentage": 91.0, "image": "https://randomuser.me/api/portraits/women/29.jpg" },
+
+      { "id": 10, "name": "Anushka S.", "percentage": 91.0, "image": "https://randomuser.me/api/portraits/women/30.jpg" },
+      { "id": 11, "name": "Vidula W.", "percentage": 90.6, "image": "https://randomuser.me/api/portraits/women/31.jpg" }
+    ]
+  },
+
+  "2023": {
+    "id": "year-2023",
+    "title": "2023 & 24 Results",
+    "summary": "9 out of 24 Students Scored above 90%",
+    "students": [
+      { "id": 1, "name": "Vedant T.", "percentage": 98.6, "image": "https://randomuser.me/api/portraits/men/41.jpg" },
+      { "id": 2, "name": "Nilanjan S.", "percentage": 97.4, "image": "https://randomuser.me/api/portraits/men/42.jpg" },
+      { "id": 3, "name": "Abhinandan C.", "percentage": 97.2, "image": "https://randomuser.me/api/portraits/men/43.jpg" },
+
+      { "id": 4, "name": "Shriya P.", "percentage": 95.8, "image": "https://randomuser.me/api/portraits/women/44.jpg" },
+      { "id": 5, "name": "Shubham V.", "percentage": 94.8, "image": "https://randomuser.me/api/portraits/men/45.jpg" },
+      { "id": 6, "name": "Aashna S.", "percentage": 93.2, "image": "https://randomuser.me/api/portraits/women/46.jpg" },
+
+      { "id": 7, "name": "Vaibhav B.", "percentage": 92.0, "image": "https://randomuser.me/api/portraits/men/47.jpg" },
+      { "id": 8, "name": "Vaishnavi Y.", "percentage": 91.2, "image": "https://randomuser.me/api/portraits/women/48.jpg" },
+      { "id": 9, "name": "Aniruddh C.", "percentage": 90.4, "image": "https://randomuser.me/api/portraits/men/49.jpg" }
+    ]
+  }
+}
