@@ -8,6 +8,7 @@ export default function Navbar() {
 
   const [menuOpen, setMenuOpen] = useState(false);
   const [resultOpen, setResultOpen] = useState(false);
+  const [studyOpen, setStudyOpen] = useState(false);
 
   const years = [
     { id: "year-2026", title: "2026 Upcoming" },
@@ -61,6 +62,43 @@ export default function Navbar() {
             Home
           </Link>
 
+          {/* ABOUT US */}
+          <Link
+            to="/about"
+            className="text-[11px] font-black uppercase tracking-widest text-[#002147] hover:text-blue-600"
+          >
+            About Us
+          </Link>
+
+          {/* STUDY MATERIAL DROPDOWN */}
+          <div className="relative">
+            <button
+              onClick={() => setStudyOpen(!studyOpen)}
+              className="text-[11px] font-black uppercase tracking-widest text-[#002147] hover:text-blue-600"
+            >
+              Study Material ▼
+            </button>
+
+            {studyOpen && (
+              <div className="absolute mt-2 w-40 bg-white border shadow-xl rounded-xl py-2">
+                <Link
+                  to="/books"
+                  onClick={() => setStudyOpen(false)}
+                  className="block px-4 py-2 text-[11px] font-bold text-[#002147] hover:bg-blue-50"
+                >
+                  Books
+                </Link>
+                <Link
+                  to="/videos"
+                  onClick={() => setStudyOpen(false)}
+                  className="block px-4 py-2 text-[11px] font-bold text-[#002147] hover:bg-blue-50"
+                >
+                  Videos
+                </Link>
+              </div>
+            )}
+          </div>
+
           {/* RESULT DROPDOWN */}
           <div className="relative">
             <button
@@ -85,11 +123,12 @@ export default function Navbar() {
             )}
           </div>
 
+          {/* CONTACT */}
           <Link
             to="/contact"
             className="text-[11px] font-black uppercase tracking-widest text-[#002147] hover:text-blue-600"
           >
-            Contact
+            Contact Us
           </Link>
         </div>
 
@@ -105,18 +144,40 @@ export default function Navbar() {
       {/* MOBILE MENU */}
       {menuOpen && (
         <div className="md:hidden bg-white border-t shadow-lg px-4 py-4 space-y-4">
-          <Link
-            to="/"
-            onClick={() => setMenuOpen(false)}
-            className="block font-bold text-[#002147]"
-          >
+          <Link to="/" onClick={() => setMenuOpen(false)} className="block font-bold">
             Home
           </Link>
 
+          <Link to="/about" onClick={() => setMenuOpen(false)} className="block font-bold">
+            About Us
+          </Link>
+
+          {/* STUDY MATERIAL MOBILE */}
+          <div>
+            <button
+              onClick={() => setStudyOpen(!studyOpen)}
+              className="w-full flex justify-between items-center font-bold"
+            >
+              Study Material <span>▼</span>
+            </button>
+
+            {studyOpen && (
+              <div className="mt-2 pl-4 space-y-2">
+                <Link to="/books" onClick={() => setMenuOpen(false)} className="block">
+                  Books
+                </Link>
+                <Link to="/videos" onClick={() => setMenuOpen(false)} className="block">
+                  Videos
+                </Link>
+              </div>
+            )}
+          </div>
+
+          {/* RESULTS MOBILE */}
           <div>
             <button
               onClick={() => setResultOpen(!resultOpen)}
-              className="w-full flex justify-between items-center font-bold text-[#002147]"
+              className="w-full flex justify-between items-center font-bold"
             >
               Results <span>▼</span>
             </button>
@@ -127,7 +188,7 @@ export default function Navbar() {
                   <button
                     key={y.id}
                     onClick={() => handleScrollToBatch(y.id)}
-                    className="block text-sm text-[#002147] hover:text-blue-600"
+                    className="block text-sm hover:text-blue-600"
                   >
                     {y.title}
                   </button>
@@ -136,12 +197,8 @@ export default function Navbar() {
             )}
           </div>
 
-          <Link
-            to="/contact"
-            onClick={() => setMenuOpen(false)}
-            className="block font-bold text-[#002147]"
-          >
-            Contact
+          <Link to="/contact" onClick={() => setMenuOpen(false)} className="block font-bold">
+            Contact Us
           </Link>
         </div>
       )}

@@ -1,10 +1,9 @@
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import ResultPage from "./pages/ResultPage";
-
-function Home() {
-  return <div className="min-h-screen bg-lightbg"></div>;
-}
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import Books from "./pages/Books";
 
 export default function App() {
   return (
@@ -13,8 +12,11 @@ export default function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/books" element={<Books />} />
         <Route path="/results" element={<ResultPage />} />
       </Routes>
+
+      <Footer />
     </>
   );
 }
