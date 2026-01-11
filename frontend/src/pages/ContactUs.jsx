@@ -13,8 +13,8 @@ export default function ContactPage() {
     {
       icon: <Mail className="w-6 h-6" />,
       title: "Email",
-      details: "admin@infinityclasses.org",
-      link: "mailto:admin@infinityclasses.org"
+      details: "infinityclassthane@gmail.com",
+      link: "mailto:infinityclassthane@gmail.com"
     },
     {
       icon: <Phone className="w-6 h-6" />,
@@ -50,7 +50,7 @@ export default function ContactPage() {
           <iframe
             title="Location Map"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3766.533282433144!2d72.9646453149038!3d19.25916328698188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b93800000001%3A0x6d11f7c1e6e6e6e6!2sInfinity%20Classes!5e0!3m2!1sen!2sin!4v1625000000000"
-            className="w-full h-[450px]"
+            className="w-full h-112.5"
             style={{ border: 0 }}
             allowFullScreen=""
             loading="lazy"
@@ -72,12 +72,12 @@ export default function ContactPage() {
               transition={{ delay: idx * 0.1 }}
               className="flex gap-6 group"
             >
-              <div className="flex-shrink-0 w-14 h-14 bg-blue-50 text-blue-700 rounded-2xl flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
+              <div className="shrink-0 w-14 h-14 bg-blue-50 text-blue-700 rounded-2xl flex items-center justify-center group-hover:bg-blue-600 group-hover:text-white transition-colors duration-300">
                 {item.icon}
               </div>
               <div>
                 <h3 className="text-xl font-bold text-slate-900 mb-2">{item.title}:</h3>
-                <p className="text-slate-600 leading-relaxed max-w-[280px]">
+                <p className="text-slate-600 leading-relaxed max-w-70">
                   {item.details}
                 </p>
               </div>

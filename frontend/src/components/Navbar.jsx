@@ -7,6 +7,9 @@ export default function Navbar() {
   const location = useLocation();
 
   const [menuOpen, setMenuOpen] = useState(false);
+  const [studyOpen, setStudyOpen] = useState(false);
+  const [galleryOpen, setGalleryOpen] = useState(false);
+  const [resultOpen, setResultOpen] = useState(false);
 
   const years = [
     { id: "year-2026", title: "2026 Upcoming" },
@@ -16,6 +19,8 @@ export default function Navbar() {
   ];
 
   const handleScrollToBatch = (yearId) => {
+    setMenuOpen(false);
+    setResultOpen(false);
     if (location.pathname !== "/results") {
       navigate(`/results#${yearId}`);
     } else {
@@ -38,7 +43,6 @@ export default function Navbar() {
         {desc && <p className="text-xs text-slate-500">{desc}</p>}
       </div>
     );
-
     return to ? <Link to={to}>{Item}</Link> : <div onClick={onClick}>{Item}</div>;
   };
 
@@ -65,13 +69,10 @@ export default function Navbar() {
           <Link to="/" className="navLink">Home</Link>
           <Link to="/about" className="navLink">About Us</Link>
 
-          {/* STUDY MATERIAL */}
+          {/* STUDY */}
           <div className="relative group">
             <button className="navLink">Study Material ▾</button>
-
-            {/* Hover bridge */}
             <div className="absolute left-0 top-full h-4 w-full"></div>
-
             <div className="absolute mt-4 w-64 bg-white rounded-2xl shadow-xl border p-4 opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all">
               <h3 className="dropdownTitle">Study Resources</h3>
               <DropdownItem to="/books" title="📚 Books" desc="PDFs & notes" />
@@ -83,8 +84,7 @@ export default function Navbar() {
           <div className="relative group">
             <button className="navLink">Gallery ▾</button>
             <div className="absolute left-0 top-full h-4 w-full"></div>
-
-            <div className="absolute mt-4 w-[420px] bg-white rounded-2xl shadow-xl border p-6 grid grid-cols-2 gap-6 opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all">
+            <div className="absolute mt-4 w-105 bg-white rounded-2xl shadow-xl border p-6 grid grid-cols-2 gap-6 opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all">
               <div>
                 <h3 className="dropdownTitle">2025 Batch</h3>
                 <DropdownItem to="/gallery/2025/felicitation" title="🎖 Felicitation" desc="Toppers & awards" />
@@ -100,12 +100,8 @@ export default function Navbar() {
 
           {/* RESULTS */}
           <div className="relative group">
-            <button className="bg-[#002147] text-white px-5 py-2 rounded-xl text-[11px] font-black uppercase tracking-[0.25em] hover:bg-blue-900">
-              Result ▾
-            </button>
-
+            <button className="navLink">Result ▾</button>
             <div className="absolute right-0 top-full h-4 w-full"></div>
-
             <div className="absolute right-0 mt-4 w-64 bg-white rounded-2xl shadow-xl border p-4 opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all">
               <h3 className="dropdownTitle">Select Batch</h3>
               {years.map((y) => (
@@ -129,6 +125,61 @@ export default function Navbar() {
           ☰
         </button>
       </div>
+
+      {/* MOBILE MENU */}
+      {menuOpen && (
+        <div className="md:hidden bg-white border-t px-4 py-4 space-y-4">
+
+          <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
+          <Link to="/about" onClick={() => setMenuOpen(false)}>About Us</Link>
+
+          {/* Study */}
+          <div>
+            <button onClick={() => setStudyOpen(!studyOpen)} className="w-full flex justify-between">
+              Study Material <span>▼</span>
+            </button>
+            {studyOpen && (
+              <div className="pl-4 space-y-2">
+                <Link to="/books" onClick={() => setMenuOpen(false)}>Books</Link>
+                <Link to="/videos" onClick={() => setMenuOpen(false)}>Videos</Link>
+              </div>
+            )}
+          </div>
+
+          {/* Gallery */}
+          <div>
+            <button onClick={() => setGalleryOpen(!galleryOpen)} className="w-full flex justify-between">
+              Gallery <span>▼</span>
+            </button>
+            {galleryOpen && (
+              <div className="pl-4 space-y-2">
+                <Link to="/gallery/2025/felicitation">2025 Felicitation</Link>
+                <Link to="/gallery/2025/picnic">2025 Picnic</Link>
+                <Link to="/gallery/2024/felicitation">2024 Felicitation</Link>
+                <Link to="/gallery/2024/picnic">2024 Picnic</Link>
+              </div>
+            )}
+          </div>
+
+          {/* Results */}
+          <div>
+            <button onClick={() => setResultOpen(!resultOpen)} className="w-full flex justify-between">
+              Result <span>▼</span>
+            </button>
+            {resultOpen && (
+              <div className="pl-4 space-y-2">
+                {years.map((y) => (
+                  <div key={y.id} onClick={() => handleScrollToBatch(y.id)}>
+                    {y.title}
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+
+          <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact Us</Link>
+        </div>
+      )}
     </nav>
   );
 }

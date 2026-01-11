@@ -10,16 +10,21 @@ import ContactPage from "./pages/ContactUs";
 export default function App() {
   return (
     <>
+      {/* Navbar always visible */}
       <Navbar />
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/books" element={<Books />} />
-        <Route path="/results" element={<ResultPage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-      </Routes>
+      {/* Push content below fixed navbar */}
+      <div className="pt-20 min-h-screen">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/books" element={<Books />} />
+          <Route path="/results" element={<ResultPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+        </Routes>
+      </div>
 
+      {/* Footer always visible */}
       <Footer />
     </>
   );

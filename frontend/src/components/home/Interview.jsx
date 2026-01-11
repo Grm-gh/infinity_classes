@@ -29,7 +29,7 @@ export default function Interview() {
           <img
             src="https://img.youtube.com/vi/wKSGLKe2nss/hqdefault.jpg"
             alt="Interview"
-            className="w-full h-[320px] object-cover"
+            className="w-full h-80 object-cover"
           />
 
           {/* Play overlay */}
