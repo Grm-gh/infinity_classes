@@ -1,26 +1,38 @@
 export default function Principal() {
   return (
-    <section className="py-20 text-center">
-      <h2 className="text-2xl font-semibold mb-10">
-        From the Principal&apos;s Desk
-      </h2>
+    <section className="py-24 bg-[#f8fafc]">
+      <div className="max-w-6xl mx-auto px-6">
 
-      <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10 px-6">
-        <img
-          src="/assets/principal.png"
-          className="w-56"
-          alt="Principal"
-        />
+        <h2 className="text-3xl font-bold text-center text-[#143c8c] mb-12 brand-font">
+          From the Principal&apos;s Desk
+        </h2>
 
-        <div className="text-left">
-          <p className="text-gray-700 leading-relaxed text-sm mb-4">
-            At Infinity Classes, we unlock the infinite potential within
-            each student...
-          </p>
+        <div className="flex flex-col md:flex-row items-center gap-12">
 
-          <button className="bg-[#143c8c] text-white px-6 py-2 rounded-full text-sm">
-            Read More
-          </button>
+          {/* Image */}
+          <div className="relative">
+            <div className="absolute -inset-4 bg-blue-200/40 rounded-full blur-2xl"></div>
+            <img
+              src="https://images.unsplash.com/photo-1573497019418-b400bb3ab074"
+              alt="Principal"
+              className="relative w-56 h-56 object-cover rounded-full shadow-2xl border-4 border-white"
+            />
+          </div>
+
+          {/* Text */}
+          <div className="max-w-xl">
+            <p className="text-slate-600 leading-relaxed mb-6">
+              At Infinity Classes, we believe every student carries unlimited
+              potential. Our responsibility is not just to teach, but to guide,
+              inspire and nurture young minds to achieve excellence in academics
+              and in life.
+            </p>
+
+            <button className="bg-[#143c8c] text-white px-8 py-3 rounded-full text-sm font-semibold hover:bg-blue-700 transition">
+              Read More
+            </button>
+          </div>
+
         </div>
       </div>
     </section>

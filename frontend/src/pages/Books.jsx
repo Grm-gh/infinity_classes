@@ -1,5 +1,9 @@
 const bookCategories = [
   {
+    title: "Class VIII",
+    buttons: ["Maha Board", "CBSE Board", "ICSE Board"],
+  },
+  {
     title: "Class IX",
     buttons: ["Maha Board", "CBSE Board", "ICSE Board"],
   },
@@ -14,14 +18,6 @@ const bookCategories = [
   {
     title: "Class XII",
     buttons: ["Maha Board", "CBSE Board", "ICSE Board"],
-  },
-  {
-    title: "JEE",
-    buttons: ["Books"],
-  },
-  {
-    title: "NEET",
-    buttons: ["Books"],
   },
 ];
 

@@ -1,1 +1,71 @@
 @import "tailwindcss";
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f8fafc;
+}
+
+/* Brand */
+.brand-font {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 0.06em;
+}
+
+/* Navbar links */
+.navLink {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-dark);
+  position: relative;
+  transition: all 0.25s ease;
+}
+
+.navLink:hover {
+  color: var(--royal-light);
+}
+
+/* Premium underline */
+.navLink::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: var(--royal-light);
+  transition: width 0.3s ease;
+}
+
+.navLink:hover::after {
+  width: 100%;
+}
+
+/* Dropdown headers */
+.dropdownTitle {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--royal-blue);
+  margin-bottom: 12px;
+}
+
+/* Primary CTA (Result button) */
+.primaryBtn {
+  background: linear-gradient(135deg, var(--royal-light), var(--royal-blue));
+  color: white;
+  border-radius: 16px;
+  padding: 10px 24px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  transition: all 0.35s ease;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.35);
+}
+
+.primaryBtn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 30px rgba(30, 58, 138, 0.45);
+}

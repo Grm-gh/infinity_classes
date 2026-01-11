@@ -19,7 +19,7 @@ export default function Footer() {
               <span className="font-semibold">Phone:</span> +91 85-0753-0753
             </p>
             <p className="text-sm">
-              <span className="font-semibold">Email:</span> admin@infinityclasses.org
+              <span className="font-semibold">Email:</span> infinityclassthane@gmail.com
             </p>
           </div>
 
