@@ -27,10 +27,6 @@ export default function Principal() {
               inspire and nurture young minds to achieve excellence in academics
               and in life.
             </p>
-
-            <button className="bg-[#143c8c] text-white px-8 py-3 rounded-full text-sm font-semibold hover:bg-blue-700 transition">
-              Read More
-            </button>
           </div>
 
         </div>

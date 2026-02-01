@@ -15,8 +15,6 @@ export default function Home() {
       <Principal />
       <Interview />
       <Courses />
-      <Blogs />
-      <Faculty />
     </div>
   );
 }
