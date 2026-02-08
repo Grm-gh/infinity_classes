@@ -7,12 +7,14 @@ import Books from "./pages/Books";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactUs";
 import AboutDetails from "./pages/AboutDetails";
+import ResultPopupOnce from "./components/results/ResultPopupOnce";
 
 export default function App() {
   return (
     <>
       {/* Navbar always visible */}
       <Navbar />
+      <ResultPopupOnce />
 
       {/* Push content below fixed navbar */}
       <div className="pt-20 min-h-screen">

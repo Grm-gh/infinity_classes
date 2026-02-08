@@ -30,7 +30,7 @@ export default function Navbar() {
               loop
               muted
               playsInline
-              className="h-14 object-contain"
+              className="h-20 md:h-24 object-contain"
             />
           </div>
 
@@ -49,6 +49,7 @@ export default function Navbar() {
 
             <Link className={navItem} to="/">Home</Link>
             <Link className={navItem} to="/about">About</Link>
+            <Link className={navItem} to="/results">Results</Link>
             <Link className={navItem} to="/courses">Courses</Link>
             <Link className={navItem} to="/faculty">Our Faculty</Link>
             <Link className={navItem} to="/contact">Contact Us</Link>
@@ -59,6 +60,7 @@ export default function Navbar() {
           <button
             className="md:hidden text-white text-2xl"
             onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle menu"
           >
             ☰
           </button>
@@ -71,6 +73,7 @@ export default function Navbar() {
 
           <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
           <Link to="/about" onClick={() => setMenuOpen(false)}>About</Link>
+          <Link to="/results" onClick={() => setMenuOpen(false)}>Results</Link>
           <Link to="/courses" onClick={() => setMenuOpen(false)}>Courses</Link>
           <Link to="/faculty" onClick={() => setMenuOpen(false)}>Our Faculty</Link>
           <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact Us</Link>
