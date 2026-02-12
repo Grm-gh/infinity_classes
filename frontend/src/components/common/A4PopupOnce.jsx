@@ -1,28 +1,39 @@
-export default function PopupOnce({ onClose, children }) {
+import { useState } from "react";
+import resultImage from "../../assets/popupimage.jpg";
+
+export default function ResultPopup() {
+  const [open, setOpen] = useState(true);
+
   return (
-    <div className="fixed inset-0 z-[9999] bg-black/60 flex items-center justify-center">
-      
-      {/* POPUP BOX */}
-      <div
-        className="relative bg-white w-[90%] max-w-4xl max-h-[80vh] overflow-y-auto"
-        onClick={(e) => e.stopPropagation()} // ⬅ important
-      >
+    <>
+      {open && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center">
+          
+          {/* OVERLAY */}
+          <div
+            className="absolute inset-0 bg-black/70"
+            onClick={() => setOpen(false)}
+          ></div>
 
-        {/* CLOSE BUTTON */}
-        <button
-          type="button"
-          onClick={(e) => {
-            e.stopPropagation();
-            onClose();
-          }}
-          className="absolute top-2 right-2 border border-black px-2 text-sm cursor-pointer"
-        >
-          ✕
-        </button>
+          {/* POPUP BOX */}
+          <div className="relative bg-white p-4 max-w-5xl w-[95%] rounded-lg z-50">
+            
+            {/* CLOSE BUTTON */}
+            <button
+              onClick={() => setOpen(false)}
+              className="absolute top-2 right-2 text-xl font-bold"
+            >
+              ✕
+            </button>
 
-        {children}
-
-      </div>
-    </div>
+            <img
+              src={resultImage}
+              alt="Results"
+              className="w-full h-auto rounded-md"
+            />
+          </div>
+        </div>
+      )}
+    </>
   );
 }

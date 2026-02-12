@@ -7,14 +7,14 @@ import Books from "./pages/Books";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactUs";
 import AboutDetails from "./pages/AboutDetails";
-import ResultPopupOnce from "./components/results/ResultPopupOnce";
+import ResultPopupOnce from "./components/common/A4PopupOnce.jsx";
 
 export default function App() {
   return (
     <>
       {/* Navbar always visible */}
       <Navbar />
-      <ResultPopupOnce />
+      <ResultPopupOnce /> {/* Show popup once per session */}
 
       {/* Push content below fixed navbar */}
       <div className="pt-20 min-h-screen">
