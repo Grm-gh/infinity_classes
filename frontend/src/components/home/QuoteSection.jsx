@@ -1,6 +1,6 @@
 export default function QuoteSection() {
   return (
-    <section className="relative bg-linear-to-br from-[#143c8c] to-[#1e40af] text-white py-24 overflow-hidden">
+    <section className="relative bg-[#1a4380] text-white py-24 overflow-hidden">
 
       {/* Decorative glows */}
       <div className="absolute -top-24 -left-24 w-96 h-96 bg-blue-400/20 rounded-full blur-3xl"></div>
@@ -33,7 +33,7 @@ export default function QuoteSection() {
           <img
             src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b"
             alt="Students studying"
-            className="relative rounded-3xl shadow-2xl object-cover"
+            className="relative rounded-3xl shadow-2xl object-cover w-full h-[400px]"
           />
         </div>
 

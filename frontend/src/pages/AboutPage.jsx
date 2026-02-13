@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom";
 import aboutImg from "../assets/iclassesimage.webp";
-
-// ✅ Import components with CAPITAL names
 import ProminentFeatures from "../components/acomponents/pfeatures.jsx";
 
 export default function AboutPreview() {
@@ -16,7 +14,7 @@ export default function AboutPreview() {
             <img
               src={aboutImg}
               alt="Infinity Classes"
-              className="rounded-2xl shadow-xl w-full h-[420px] object-cover"
+              className="rounded-2xl shadow-xl w-full h-[490px] object-cover"
             />
           </div>
 
@@ -26,15 +24,16 @@ export default function AboutPreview() {
               About Infinity Classes
             </h2>
 
-            <h3 className="text-4xl font-bold text-slate-900 mb-6">
+            <h3 className="text-4xl font-bold text-[#1a4380] mb-6">
               Building Strong Academic Foundations
             </h3>
 
             <p className="text-slate-600 text-lg leading-relaxed mb-6">
-              Infinity Classes is committed to delivering quality education
-              through expert faculty, structured learning, and personal
-              mentoring. We focus on concept clarity, discipline, and consistent
-              evaluation to help students achieve academic excellence.
+              Welcome to Infinity Classes, where education is a journey of 
+              boundless possibilities. We believe that every student 
+              possesses limitless potential waiting to be unlocked and nurtured.
+              Our commitment to excellence, integrity, and personalized 
+              education forms the cornerstone of our approach.
             </p>
 
             <Link
