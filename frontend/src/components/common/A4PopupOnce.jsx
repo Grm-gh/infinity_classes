@@ -1,5 +1,5 @@
 import { useState } from "react";
-import resultImage from "../../assets/popupimage.jpg";
+import resultImage from "../../assets/popimage.png";
 
 export default function ResultPopup() {
   const [open, setOpen] = useState(true);
@@ -7,21 +7,15 @@ export default function ResultPopup() {
   return (
     <>
       {open && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70">
           
-          {/* OVERLAY */}
-          <div
-            className="absolute inset-0 bg-black/70"
-            onClick={() => setOpen(false)}
-          ></div>
-
-          {/* POPUP BOX */}
-          <div className="relative bg-white p-4 max-w-5xl w-[95%] rounded-lg z-50">
+          {/* IMAGE POPUP */}
+          <div className="relative w-[90vw] h-[90vh] flex items-center justify-center">
             
             {/* CLOSE BUTTON */}
             <button
               onClick={() => setOpen(false)}
-              className="absolute top-2 right-2 text-xl font-bold"
+              className="absolute top-4 right-4 text-3xl font-bold text-white z-10"
             >
               ✕
             </button>
@@ -29,9 +23,10 @@ export default function ResultPopup() {
             <img
               src={resultImage}
               alt="Results"
-              className="w-full h-auto rounded-md"
+              className="max-w-full max-h-full object-contain"
             />
           </div>
+
         </div>
       )}
     </>

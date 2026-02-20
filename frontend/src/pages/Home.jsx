@@ -5,7 +5,7 @@ import Interview from "../components/home/Interview";
 import Courses from "../components/home/Courses";
 //import StudyMaterial from "../components/home/StudyMaterial";
 import Blogs from "../components/home/Blogs";
-import Faculty from "../components/home/Faculty";
+//import Faculty from "../components/home/Faculty";
 
 export default function Home() {
   return (
