@@ -1,41 +1,27 @@
 export default function QuoteSection() {
   return (
-    <section className="relative bg-[#1a4380] text-white py-24 overflow-hidden">
+    <section className="bg-[#1a4380] text-white py-28 px-6">
+      <div className="max-w-5xl mx-auto text-center">
 
-      {/* Decorative glows */}
-      <div className="absolute -top-24 -left-24 w-96 h-96 bg-blue-400/20 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"></div>
+        {/* Top Small Heading */}
+        <p className="text-sm tracking-[0.4em] uppercase text-blue-200 mb-10">
+          Our Philosophy
+        </p>
 
-      <div className="relative max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center px-6">
+        {/* Main Quote */}
+        <h2 className="text-4xl md:text-6xl font-serif font-semibold leading-tight mb-10">
+          We are what we repeatedly do,
+          <br />
+          Excellence then is not an act but a habit.
+        </h2>
 
-        {/* Quote */}
-        <div>
-          <p className="uppercase text-blue-200 tracking-[0.25em] text-xs mb-4">
-            Our Philosophy
-          </p>
-
-          <h2 className="text-4xl md:text-5xl font-bold leading-tight brand-font">
-            We are what we repeatedly do,
-            <span className="block text-blue-200 mt-2">
-              Excellence then is not an act but a habit.
-            </span>
-          </h2>
-
-          <p className="mt-6 text-blue-100 max-w-lg">
-            At Infinity Classes, we believe consistency, discipline and smart
-            learning create extraordinary results.
-          </p>
-        </div>
-
-        {/* Image */}
-        <div className="relative">
-          <div className="absolute -inset-4 bg-white/10 rounded-3xl blur-xl"></div>
-          <img
-            src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b"
-            alt="Students studying"
-            className="relative rounded-3xl shadow-2xl object-cover w-full h-[400px]"
-          />
-        </div>
+        {/* Description */}
+        <p className="text-lg md:text-xl text-blue-100 leading-relaxed max-w-4xl mx-auto">
+          At Infinity Classes, we believe that discipline, focus, and smart
+          learning create extraordinary academic results. Our structured
+          approach ensures every student develops strong concepts,
+          confidence, and clarity.
+        </p>
 
       </div>
     </section>
